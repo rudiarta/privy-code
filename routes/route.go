@@ -21,5 +21,6 @@ func InitRoutes(app *gin.Engine) {
 	{
 		balanceRouter.POST("/add", middleware.AuthMiddleware, controller.AddBalanceController)
 		balanceRouter.POST("/takeout", middleware.AuthMiddleware, controller.TakeOutBalanceController)
+		balanceRouter.POST("/transfer", middleware.AuthMiddleware, controller.TransferBalanceController)
 	}
 }
